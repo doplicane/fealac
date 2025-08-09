@@ -18,11 +18,22 @@
     <nav class="bg-green-800 text-white p-4 flex justify-between items-center shadow-lg">
       <a href="#" class="text-2xl font-bold tracking-wide">FEALAC FAIR+</a>
       <ul class="flex space-x-6 text-lg">
-        <li><a href="#" class="hover:text-green-300 transition-colors duration-300">홈</a></li>
-        <li><a href="#" class="hover:text-green-300 transition-colors duration-300">생산자 소개</a></li>
-        <li><a href="#" class="hover:text-green-300 transition-colors duration-300">공정무역이란?</a></li>
-        <li><a href="#" class="hover:text-green-300 transition-colors duration-300">정부 인센티브</a></li>
-        <li><a href="#" class="hover:text-green-300 transition-colors duration-300">참여하기</a></li>
+        <li><a href="#" class="hover:text-blue-300 transition-colors duration-300">홈</a></li>
+        <li><a href="#" class="hover:text-blue-300 transition-colors duration-300">생산자 소개</a></li>
+        <li><a href="#" class="hover:text-blue-300 transition-colors duration-300">공정무역이란?</a></li>
+        <li><a href="#" class="hover:text-blue-300 transition-colors duration-300">정부 인센티브</a></li>
+        <li><a href="#" class="hover:text-blue-300 transition-colors duration-300">참여하기</a></li>
+        <li class="relative group" id="lang-menu">
+          <a href="#" class="hover:text-blue-300 transition-colors duration-300">Language</a>
+          <ul id="lang-dropdown"
+              class="absolute left-1/2 transform -translate-x-1/2 mt-2 w-28 bg-white text-gray-800 rounded-lg shadow-lg border border-gray-200 opacity-0 pointer-events-none transition-all duration-200 z-20">
+            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">KOR</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">ENG</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">ESP</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">POR</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="hover:text-blue-300 transition-colors duration-300">로그인</a></li>
       </ul>
     </nav>
 
@@ -63,7 +74,7 @@
     </section>
 
     <!-- Shortcut Links -->
-    <section class="bg-green-50 py-6">
+    <section class="bg-green-50 py-4">
       <div class="container mx-auto flex justify-around text-lg font-semibold text-green-800">
         <a href="#" class="hover:text-green-600 transition-colors duration-300">모든 상품</a>
         <a href="#" class="hover:text-green-600 transition-colors duration-300">지역별 쇼핑</a>
@@ -162,6 +173,20 @@
     </footer>
 
   </div>
+
+  <script>
+    // Language dropdown menu
+    const langMenu = document.getElementById('lang-menu');
+    const langDropdown = document.getElementById('lang-dropdown');
+
+    langMenu.addEventListener('mouseenter', () => {
+      langDropdown.style.opacity = '1';
+      langDropdown.style.pointerEvents = 'auto';
+    });
+    langMenu.addEventListener('mouseleave', () => {
+      langDropdown.style.opacity = '0';
+      langDropdown.style.pointerEvents = 'none';
+    });
+  </script>
 </body>
 </html>
-
